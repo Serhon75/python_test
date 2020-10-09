@@ -1,0 +1,8 @@
+select *
+from payments_y2020q4
+where
+(terminal_id::text like '133%' or
+terminal_id::text like '170%' or
+terminal_id::text like '101%') and
+status_code = 3 and
+(payment_type is null or
